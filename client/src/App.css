@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/* NavBar */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgb(100, 152, 195);
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.navbar li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 15px 0 0;
+}
+
+/* End of Navbar */
+
+
+
+/* Login Form */
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  text-align: center;
+}
+input {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0.5em 0;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1.25em;
+  color: #000000;
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(0, 89, 255);
+  border: 1px solid darken(blue, 5%);
+  padding: 0.5em 2em;
+  color: white;
+  margin-right: 0.5em;
+  box-shadow: inset 0px 1px 0px;
+}
+
+/* End of Login Form */
+
+
+
+/* Home Page */
+
+.home{
+  text-align: center;
+}
+
+/* End Of Home Page */
+
+
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgb(100, 152, 195);
+  text-align: center;
+}
+
+/* End Of Footer */
