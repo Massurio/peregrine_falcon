@@ -10,8 +10,6 @@
   flex-direction: column;
 }
 
-
-
 /* NavBar */
 
 .navbar {
@@ -32,8 +30,6 @@
 }
 
 /* End of Navbar */
-
-
 
 /* Login Form */
 .log-form {
@@ -79,17 +75,13 @@ input {
 
 /* End of Login Form */
 
-
-
 /* Home Page */
 
-.home{
+.home {
   text-align: center;
 }
 
 /* End Of Home Page */
-
-
 
 /* Footer */
 
