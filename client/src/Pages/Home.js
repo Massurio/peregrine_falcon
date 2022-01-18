@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div class="home">
+    <div>
       <h1>Home Page</h1>
       <iframe
         width="960"

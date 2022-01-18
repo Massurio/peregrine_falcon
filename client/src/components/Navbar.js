@@ -16,6 +16,21 @@ export default function navbar() {
       <li>
         <Link to="/signup">Signup</Link>
       </li>
+      <li>
+        <Link to="/logout">Logout</Link>
+      </li>
+      <li>
+        <Link to="/UserPage">User Page</Link>
+      </li>
+      <li>
+        <Link to="/ContactUs">Contact Us</Link>
+      </li>
+      <li>
+        <Link to="/LocationPage">Location Page</Link>
+      </li>
+      <li>
+        <Link to="/stagepage">Stage Page</Link>
+      </li>
     </div>
   );
 }
