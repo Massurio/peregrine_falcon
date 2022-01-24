@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
 
 * {
+  margin: 0;
   box-sizing: border-box;
 }
 
 .App {
+  margin-top: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -32,7 +34,7 @@
 /* End of Navbar */
 
 /* Login Form */
-.log-form {
+.form {
   width: 40%;
   min-width: 320px;
   max-width: 475px;
@@ -59,8 +61,10 @@ input {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 1.25em;
   color: #000000;
-  text-align: center;
+  text-align: left;
   font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(226, 224, 220);
 }
 
 .btn {
@@ -69,6 +73,7 @@ input {
   border: 1px solid darken(blue, 5%);
   padding: 0.5em 2em;
   color: white;
+  font-family: 'Courier New', Courier, monospace;
   margin-right: 0.5em;
   box-shadow: inset 0px 1px 0px;
 }
