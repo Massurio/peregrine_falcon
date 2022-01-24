@@ -1,10 +1,19 @@
 import React from 'react';
-
-export default function LogOut() {
+import { Link } from 'react-router-dom';
+export default function LogOut({ user, setUser }) {
+  const logOut = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('myToken');
+    setUser();
+  };
   return (
     <div>
-      <p>Logout Script!!!</p>
-      <p>Redirect to Home Page</p>
+      <span>{user} Do you want to logout?</span>
+        <button onClick={logOut}>
+          <Link to="/" className="link">
+            Log out
+          </Link>
+        </button>
     </div>
   );
 }
