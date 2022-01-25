@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { signUpFetch } from '../utils';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Registration() {
   const [username, setUsername] = useState('');
@@ -11,13 +11,18 @@ export default function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await signUpFetch(username, email, passw, setUser);
+    window.location.reload(false);
     console.log(user);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="form">
       <h1>Sign up Page</h1>
+      {!user ? (
       <form onSubmit={handleSubmit}>
+        <label alt="username">Username</label>
         <input
           type="text"
           name="username"
@@ -26,7 +31,7 @@ export default function Registration() {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
-
+        <label alt="email">Email</label>
         <input
           type="text"
           name="email"
@@ -35,6 +40,7 @@ export default function Registration() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
+        <label alt="password">Password</label>
         <input
           type="password"
           name="password"
@@ -47,9 +53,11 @@ export default function Registration() {
         <br />
         {/* <p>{Acount made}</p> */}
         <button type="submit" className="button">
+          <Link to="/" />
           submit
         </button>
-      </form>
+      </form>): (navigate('/login'))}
+      
     </div>
   );
 }
