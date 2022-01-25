@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar';
-import Home from './Pages/Home';
 import About from './Pages/About';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
@@ -8,9 +7,10 @@ import UserPage from './Pages/UserPage';
 import ContactUs from './Pages/ContactUs';
 import LocationPage from './Pages/LocationPage';
 import StagePage from './Pages/StagePage';
-import Footer from './components/Footer';
+import Footer from './Pages/Footer/footer';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/HomePage/Home';
 
 function App() {
   return (

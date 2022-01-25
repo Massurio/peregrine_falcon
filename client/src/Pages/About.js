@@ -1,5 +1,5 @@
 import React from 'react';
-import camino from '../images/camino.png';
+// import camino from './';
 
 export default function About() {
   return (

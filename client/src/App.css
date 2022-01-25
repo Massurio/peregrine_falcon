@@ -1,19 +1,22 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600');
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Neonderthaw&family=Petemoss&family=Roboto:wght@300&display=swap');
 
 * {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.App {
+ /* .App {
   margin-top: 30px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column;  */
 
 /* NavBar */
-
+/* 
 .navbar {
   position: absolute;
   top: 0;
@@ -29,18 +32,19 @@
   margin: 0;
   padding: 0;
   margin: 0 15px 0 0;
-}
+} */
 
 /* End of Navbar */
 
 /* Login Form */
 .form {
+  border-radius: 3%;
   width: 40%;
   min-width: 320px;
-  max-width: 475px;
+  max-width: 475px; 
   background: #fff;
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -67,7 +71,14 @@ input {
   background-color: rgb(226, 224, 220);
 }
 
-.btn {
+.button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 3%;
   display: inline-block;
   background: rgb(0, 89, 255);
   border: 1px solid darken(blue, 5%);
@@ -75,27 +86,26 @@ input {
   color: white;
   font-family: 'Courier New', Courier, monospace;
   margin-right: 0.5em;
-  box-shadow: inset 0px 1px 0px;
-}
+  box-shadow: inset 0px 1px 0px; }
 
 /* End of Login Form */
 
 /* Home Page */
-
+/* 
 .home {
   text-align: center;
-}
+}  */
 
 /* End Of Home Page */
 
 /* Footer */
 
-.footer {
+/* .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   background: rgb(100, 152, 195);
   text-align: center;
-}
+}  */
 
 /* End Of Footer */

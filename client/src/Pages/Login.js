@@ -46,7 +46,7 @@ export default function Login() {
             //   setUser(event.target.value);
             // }}
             type="submit"
-            className="btn"
+            className="button"
           >
             Login
           </button>
