@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { signUpFetch } from '../utils';
+import { Link } from 'react-router-dom';
 
 export default function Registration() {
   const [username, setUsername] = useState('');
@@ -23,6 +24,7 @@ export default function Registration() {
           title="username"
           placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
 
         <input
@@ -31,6 +33,7 @@ export default function Registration() {
           title="email"
           placeholder="email"
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="password"
@@ -38,9 +41,11 @@ export default function Registration() {
           title="password"
           placeholder="password"
           onChange={(e) => setpassw(e.target.value)}
+          required
         />
         <br />
         <br />
+        {/* <p>{Acount made}</p> */}
         <button type="submit" className="button">
           submit
         </button>

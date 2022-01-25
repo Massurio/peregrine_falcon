@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { loginFetch, tokenFetch } from '../../utils';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -14,14 +15,16 @@ export default function Login() {
   useEffect(() => {
     tokenFetch(setUser);
   }, []);
+  console.log(user);
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div>
-      {user && <h1>working</h1>}
-      {!user && <h1>Not working</h1>}
 
-      <h1>Login Page</h1>
       <div className="form">
+      <h1>Login Page</h1>
         <form onSubmit={login_handler}>
           <input
             type="text"
@@ -47,8 +50,10 @@ export default function Login() {
             // }}
             type="submit"
             className="button"
+            
           >
-            Login
+            <Link  to="/UserPage" >Login</Link>
+            
           </button>
         </form>
       </div>
