@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar';
 import About from './Pages/About';
-import Login from './Pages/Login';
+import Login from './Pages/Login/';
 import Signup from './Pages/Signup';
 import LogOut from './Pages/LogOut';
 import UserPage from './Pages/UserPage';

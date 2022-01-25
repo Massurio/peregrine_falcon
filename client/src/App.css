@@ -38,8 +38,9 @@
 
 /* Login Form */
 .form {
+  position:static;
   border-radius: 3%;
-  width: 40%;
+  width: 100%;
   min-width: 320px;
   max-width: 475px; 
   background: #fff;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { loginFetch, tokenFetch } from '../utils';
+import { loginFetch, tokenFetch } from '../../utils';
 
 export default function Login() {
   const [username, setUsername] = useState('');
