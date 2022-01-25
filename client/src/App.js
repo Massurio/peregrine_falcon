@@ -1,8 +1,9 @@
 import Navbar from './components/Navbar';
+import Home from './Pages/HomePage/Home';
 import About from './Pages/About';
 import Login from './Pages/Login/';
 import Signup from './Pages/Signup';
-import LogOut from './Pages/LogOut';
+// import LogOut from './Pages/LogOut';
 import UserPage from './Pages/UserPage';
 import ContactUs from './Pages/ContactUs';
 import LocationPage from './Pages/LocationPage';
@@ -10,7 +11,7 @@ import StagePage from './Pages/StagePage';
 import Footer from './Pages/Footer/footer';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/HomePage/Home';
+
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/logout" element={<LogOut />} />
+          {/* <Route path="/logout" element={<LogOut />} /> */}
 
           <Route path="/userPage" element={<UserPage />} />
           <Route path="/contactUs" element={<ContactUs />} />
