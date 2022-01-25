@@ -7,6 +7,8 @@ import Header from '../components/Header/Header';
 import List from '../components/List/List';
 import Map from '../components/Map/Map.jsx';
 
+
+
 const LocationPage = () => {
   const [places, setPlaces] = useState([]);
   const [weatherData, setWeatherData] = useState([]);
@@ -27,6 +29,7 @@ const LocationPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
+  
 
   // to get users current location use browser built in location API
   useEffect(() => {
@@ -42,6 +45,8 @@ const LocationPage = () => {
     const filteredPlaces = places.filter((place) => place.rating > rating);
     setFilteredPlaces(filteredPlaces);
   }, [rating]);
+
+
 
   useEffect(
     () => {
@@ -92,8 +97,11 @@ const LocationPage = () => {
             weatherData={weatherData}
           />
         </Grid>
+
+
       </Grid>
     </>
+
   );
 };
 
