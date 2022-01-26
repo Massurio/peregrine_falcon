@@ -1,4 +1,3 @@
-//require('dotenv').config();
 export const tokenFetch = async (setUser) => {
   try {
     const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
@@ -12,7 +11,7 @@ export const tokenFetch = async (setUser) => {
   }
 };
 
-export const signUpFetch = async (username, email, passw, setUser) => {
+export const signUpFetch = async (username, email, passw, setSuccess) => {
   try {
     const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
       method: 'POST',
@@ -24,7 +23,7 @@ export const signUpFetch = async (username, email, passw, setUser) => {
       }),
     });
     const data = await response.json();
-    setUser(data.user);
+    setSuccess(true);
     localStorage.setItem('myToken', data.token);
   } catch (error) {
     console.log(error);
@@ -42,7 +41,8 @@ export const loginFetch = async (username, password, setUser) => {
       }),
     });
     const data = await response.json();
-    setUser(data.username);
+    console.log(data.user.passw);
+    setUser(data.user.username);
     localStorage.setItem('myToken', data.token);
   } catch (error) {
     console.log(error);

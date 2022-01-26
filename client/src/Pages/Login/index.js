@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { loginFetch, tokenFetch } from '../../utils';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function Login({ user, setUser }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [user, setUser] = useState('');
-  const [msg, setMsg] = useState('');
 
   const login_handler = async (e) => {
     e.preventDefault();
     await loginFetch(username, password, setUser);
     console.log(localStorage.getItem('myToken'));
-    window.location.reload(false);
+    // window.location.reload(false);
   };
-  useEffect(() => {
-    tokenFetch(setUser);
-  }, []);
-  console.log(user);
 
   const navigate = useNavigate();
 
@@ -37,7 +31,7 @@ export default function Login() {
                 setUsername(event.target.value);
               }}
             />
-            <label alt='password'>Password</label>
+            <label alt="password">Password</label>
             <input
               type="password"
               name="password"

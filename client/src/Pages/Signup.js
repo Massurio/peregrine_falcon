@@ -7,10 +7,13 @@ export default function Registration() {
   const [email, setEmail] = useState('');
   const [passw, setpassw] = useState('');
   const [user, setUser] = useState('');
+  const [success, setSuccess] = useState(false);
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signUpFetch(username, email, passw, setUser);
+    await signUpFetch(username, email, passw, setSuccess);
     window.location.reload(false);
     console.log(user);
   };
@@ -20,7 +23,7 @@ export default function Registration() {
   return (
     <div className="form">
       <h1>Sign up Page</h1>
-      {!user ? (
+      {!success ? (
       <form onSubmit={handleSubmit}>
         <label alt="username">Username</label>
         <input

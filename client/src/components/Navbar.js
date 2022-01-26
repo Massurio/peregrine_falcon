@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -6,11 +6,9 @@ import './Navbar.css';
 import { BsFillBrightnessHighFill } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { tokenFetch } from '../utils';
-export default function Navbar() {
+export default function Navbar({ user, setUser }) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [user, setUser] = useState('');
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -21,12 +19,8 @@ export default function Navbar() {
       setButton(true);
     }
   };
-  useEffect(() => {
-    tokenFetch(setUser);
-  }, []);
 
   const logOut = (e) => {
-    e.preventDefault();
     localStorage.removeItem('myToken');
     setUser();
   };
@@ -98,18 +92,18 @@ export default function Navbar() {
               )}
               {user ? (
                 <li className="nav-item">
-                <Link
-                  to="/StagePage"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Stage Page
-                </Link>
-              </li>
+                  <Link
+                    to="/StagePage"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    Stage Page
+                  </Link>
+                </li>
               ) : (
                 ''
               )}
-              
+
               <li className="nav-item">
                 <Link
                   to="/about"

@@ -11,23 +11,29 @@ import StagePage from './Pages/StagePage';
 import Footer from './Pages/Footer/footer';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+  const [user, setUser] = useState();
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
+        <Navbar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={<Login user={user} setUser={setUser} />}
+          />
           <Route path="/signup" element={<Signup />} />
           {/* <Route path="/logout" element={<LogOut />} /> */}
 
-          <Route path="/userPage" element={<UserPage />} />
+          <Route path="/userPage" element={<UserPage user={user} />} />
           <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/locationPage" element={<LocationPage />} />
-          <Route path="/stagepage" element={<StagePage />} />
+          <Route path="/locationPage" element={<LocationPage user={user}/>} />
+          <Route path="/stagepage" element={<StagePage user={user}/>} />
         </Routes>
         <Footer />
       </div>

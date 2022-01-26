@@ -9,7 +9,7 @@ import Map from '../components/Map/Map.jsx';
 
 
 
-const LocationPage = () => {
+const LocationPage = ({user}) => {
   const [places, setPlaces] = useState([]);
   const [weatherData, setWeatherData] = useState([]);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
@@ -72,6 +72,7 @@ const LocationPage = () => {
 
   return (
     <>
+    <h1>Hello {user}</h1>
       <CssBaseline />
       <Header setCoordinates={setCoordinates} />
 
