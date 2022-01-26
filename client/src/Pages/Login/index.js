@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { loginFetch, tokenFetch } from '../../utils';
+import React, { useState } from 'react';
+import { loginFetch } from '../../utils';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login({ user, setUser }) {

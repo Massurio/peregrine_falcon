@@ -6,7 +6,7 @@ export default function Registration() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [passw, setpassw] = useState('');
-  const [user, setUser] = useState('');
+  // const [user, setUser] = useState('');
   const [success, setSuccess] = useState(false);
 
 
@@ -15,7 +15,7 @@ export default function Registration() {
     e.preventDefault();
     await signUpFetch(username, email, passw, setSuccess);
     window.location.reload(false);
-    console.log(user);
+    // console.log(user);
   };
 
   const navigate = useNavigate();
