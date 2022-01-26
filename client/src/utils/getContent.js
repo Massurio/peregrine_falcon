@@ -19,7 +19,7 @@ export const getLocationData2 = async (setLocationData) => {
       headers: { Authorization: `Bearer ${localStorage.getItem("myToken")}` },
     });
     const data = await response.json();
-    const myData = data.locationData;
+   let myData = data.locationData;
     setLocationData(myData);
   } catch (error) {
     console.log(error);
@@ -61,7 +61,17 @@ export const getStageData = async (setStageData) => {
       headers: { Authorization: `Bearer ${localStorage.getItem("myToken")}` },
     });
     const data = await response.json();
-    setStageData(JSON.parse(data));
+    setStageData(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const setPreviousData = (previousStage, setPreviousStage) => {
+  try {
+    console.log(previousStage);
+    setPreviousStage(previousStage);
+    console.log(previousStage);
   } catch (error) {
     console.log(error);
   }
