@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../../components/Button';
 import './footer.css';
+import { CaminoShell } from '../../components/caminoShellIcon';
 
 import { Link } from 'react-router-dom';
 import {
@@ -73,7 +74,7 @@ export default function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
-              <BsFillBrightnessHighFill className='navbar-icon' />
+              <CaminoShell  className='navbar-icon' />
               Camino de Santiago
             </Link>
           </div>
