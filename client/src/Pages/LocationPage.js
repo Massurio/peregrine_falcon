@@ -15,6 +15,7 @@ const LocationPage = ({user}) => {
   const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   const [childClicked, setchildClicked] = useState({});
+  const [locationData, setLocationData] = useState();
 
   const [coordinates, setCoordinates] = useState({
     lat: 43.16342,
