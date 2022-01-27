@@ -39,7 +39,8 @@ export default function Navbar({ user, setUser }) {
               {click ? <FaTimes /> : <FaBars />}
             </div>
             <div className='user-hello'>
-            Hello {user}
+  
+             {user && <h1>Hello {user}</h1>}
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               {/* <li className = 'nav-item'>
