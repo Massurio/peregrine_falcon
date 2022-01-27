@@ -6,7 +6,12 @@ export default function UserPage({user}) {
   
   return (
     <div>
-    <h1>Hello {user}</h1>
+
+      
+      <Background {...bgObjOne} />
+  
+      <h1>Hello {user}</h1>
+
 
     </div>
   );
