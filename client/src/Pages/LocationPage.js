@@ -6,6 +6,7 @@ import { getLocationData } from '../utils/getContent';
 import Header from '../components/Header/Header';
 import List from '../components/List/List';
 import Map from '../components/Map/Map.jsx';
+import './LocationPage.css';
 
 
 
@@ -383,7 +384,7 @@ const LocationPage = ({user}) => {
     const rate = "€"+ Math.round(item.onedPersonRateMin);
     const beds = item.numberOfBeds + "÷" + item.numberOfDorms;
     const href1 = item.albergueWebsiteURL;
-    const href2 = item.albergueBookingDotComURL;
+    const href2 = item.albergueBookingDotComURL+"?aid=1627093";
     const phone = "+"+item.tel1CountryCode+" "+item.tel1PhoneNumber;
     const text1 = "tel:"+phone;
             return (
