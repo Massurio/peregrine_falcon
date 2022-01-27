@@ -36,7 +36,7 @@ export default function Registration() {
         />
         <label alt="email">Email</label>
         <input
-          type="text"
+          type="email"
           name="email"
           title="email"
           placeholder="email"

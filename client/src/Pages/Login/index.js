@@ -6,10 +6,12 @@ export default function Login({ user, setUser }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+
   const login_handler = async (e) => {
     e.preventDefault();
     await loginFetch(username, password, setUser);
-    console.log(localStorage.getItem('myToken'));
+
+   
     // window.location.reload(false);
   };
 

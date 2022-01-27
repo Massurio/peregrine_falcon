@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 // import { IoIosCompass } from "react-icons/io";
 import { BsFillBrightnessHighFill } from 'react-icons/bs';
+import { CaminoShell } from './caminoShellIcon';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 export default function Navbar({ user, setUser }) {
@@ -32,7 +33,7 @@ export default function Navbar({ user, setUser }) {
         <nav className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <BsFillBrightnessHighFill className="navbar-icon" />
+              <CaminoShell className="navbar-icon" />
               {/* <IoIosCompass className = 'navbar-icon' /> */}
               Camino de Santiago
             </Link>

@@ -11,10 +11,15 @@ import StagePage from './Pages/StagePage';
 import Footer from './Pages/Footer/footer';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { tokenFetch } from './utils';
 
 function App() {
   const [user, setUser] = useState();
+
+useEffect(()=>{
+  tokenFetch(setUser)
+},[])
 
   return (
     <BrowserRouter>
