@@ -72,7 +72,6 @@ const LocationPage = ({user}) => {
 
   return (
     <>
-    <h1>Hello {user}</h1>
       <CssBaseline />
       <Header setCoordinates={setCoordinates} />
 

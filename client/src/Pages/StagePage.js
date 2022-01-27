@@ -59,7 +59,6 @@ export default function StagePage({user}) {
 
   return (
   <div>
-      <h1>Hello {user}</h1>
       <p>Overall distance = {distance} kilometres or {distanceInMiles} miles</p>
       <p> Estimated duration = {hours} hours and {minutes} minutes</p>
       <p>Starting GPS location = <u><a href={hrefText1}>{startLatitude},{startLongitude}</a></u></p>

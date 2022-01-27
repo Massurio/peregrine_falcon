@@ -6,13 +6,7 @@ export default function UserPage({user}) {
   
   return (
     <div>
-
-      
       <Background {...bgObjOne} />
-  
-      <h1>Hello {user}</h1>
-
-
     </div>
   );
 }

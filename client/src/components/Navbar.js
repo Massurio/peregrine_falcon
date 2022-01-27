@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-// import { IoIosCompass } from "react-icons/io";
-import { BsFillBrightnessHighFill } from 'react-icons/bs';
 import { CaminoShell } from './caminoShellIcon';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
@@ -39,6 +37,9 @@ export default function Navbar({ user, setUser }) {
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
+            </div>
+            <div className='user-hello'>
+            Hello {user}
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               {/* <li className = 'nav-item'>
