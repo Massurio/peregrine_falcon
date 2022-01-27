@@ -8,7 +8,9 @@ export default function UserPage({user}) {
     <div>
       
       <Background {...bgObjOne} />
-       
+  
+      <h1>Hello {user}</h1>
+
     </div>
   );
 }
