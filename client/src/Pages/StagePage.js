@@ -44,6 +44,8 @@ export default function StagePage({user}) {
       }, []);
 
       const mainStageData = stageData.stageData[0];
+      const stageMapURL =mainStageData.stageMapURL;
+      const stageElevationChartURL =mainStageData.stageElevationChartURL;
       const stageDestinationID = mainStageData.Locations.length-1;
       const stageDestinationLatitude = parseFloat(mainStageData.Locations[stageDestinationID].latitude); 
       const stageDestinationLongitude = parseFloat(mainStageData.Locations[stageDestinationID].longitude);
@@ -59,6 +61,7 @@ export default function StagePage({user}) {
 
   return (
   <div>
+      <h1>Stage Page </h1>
       <p>Overall distance = {distance} kilometres or {distanceInMiles} miles</p>
       <p> Estimated duration = {hours} hours and {minutes} minutes</p>
       <p>Starting GPS location = <u><a href={hrefText1}>{startLatitude},{startLongitude}</a></u></p>
@@ -70,19 +73,19 @@ export default function StagePage({user}) {
         return (
           <>
             {myItem.Locations.map((nestedItem, nestedIndex) => {
-          const locationData = {nestedItem};
-          const kmDistance = Math.round(locationData.nestedItem.Stage2locations.distanceFromPriorLocationInMetres/100)/10;
-          const distanceInMiles = Math.round(locationData.nestedItem.Stage2locations.distanceFromPriorLocationInMetres/1609.34*10)/10;
-          const hours = Math.floor(locationData.nestedItem.Stage2locations.timeFromPriorLocationInMinutes/60);
-          const minutes = Math.floor(locationData.nestedItem.Stage2locations.timeFromPriorLocationInMinutes-(hours*60));
-          const toLocation = locationData.nestedItem.locationName;
-          let myIndex = nestedIndex-1;
-          if (myIndex < 0){myIndex = 0};
-          const fromLocation = stageData.stageData[0].Locations[myIndex].locationName;
-          let lineText = fromLocation+" to "+toLocation+" = "+kmDistance+" km or "+distanceInMiles+" miles. Walking time= "+hours+" hours and "+minutes+" minutes";
-          if (nestedIndex == 0 ) {
-            {lineText = "STAGE DISTANCES AND WALKING TIMES"};
-          };
+                const locationData = {nestedItem};
+                const kmDistance = Math.round(locationData.nestedItem.Stage2locations.distanceFromPriorLocationInMetres/100)/10;
+                const distanceInMiles = Math.round(locationData.nestedItem.Stage2locations.distanceFromPriorLocationInMetres/1609.34*10)/10;
+                const hours = Math.floor(locationData.nestedItem.Stage2locations.timeFromPriorLocationInMinutes/60);
+                const minutes = Math.floor(locationData.nestedItem.Stage2locations.timeFromPriorLocationInMinutes-(hours*60));
+                const toLocation = locationData.nestedItem.locationName;
+                let myIndex = nestedIndex-1;
+                if (myIndex < 0){myIndex = 0};
+                const fromLocation = stageData.stageData[0].Locations[myIndex].locationName;
+                let lineText = fromLocation+" to "+toLocation+" = "+kmDistance+" km or "+distanceInMiles+" miles. Walking time= "+hours+" hours and "+minutes+" minutes";
+                if (nestedIndex == 0 ) {
+                  {lineText = "STAGE DISTANCES AND WALKING TIMES"};
+                };
               return (
                 <>
                 <p key={nestedIndex}>{lineText}</p>
@@ -92,6 +95,9 @@ export default function StagePage({user}) {
           </>
         );
       })}
+         <img src={stageMapURL} alt="Stage Map" width="800px" />
+         <br></br>
+         <img src={stageElevationChartURL} alt="Stage Map" width="800px" />
     </div>
   );
 };
