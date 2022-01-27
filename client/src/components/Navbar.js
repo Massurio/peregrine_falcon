@@ -70,7 +70,7 @@ export default function Navbar({ user, setUser }) {
                     className="nav-links"
                     onClick={closeMobileMenu}
                   >
-                    UserPage
+                    User Page
                   </Link>
                 </li>
               ) : (

@@ -44,7 +44,7 @@
     border: 1px solid #fff;
   }
   
-  .footer-links {
+  .footer-links { 
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -99,7 +99,8 @@
   }
   
   .social-media {
-    max-width: 1000px;
+    
+    max-width: 1300px;
     width: 100%;
   }
   
@@ -116,7 +117,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 240px;
+    width: 200px;
   }
   
   .social-logo {
@@ -157,3 +158,12 @@
       flex-direction: column;
     }
   }
+
+/*   
+  .s_btn--outline {
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+  } */

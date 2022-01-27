@@ -1,10 +1,14 @@
 import React from 'react';
+import Background from '../components/Background';
+import { bgObjOne } from '../Pages/Background/BgData';
 
 export default function UserPage({user}) {
   
   return (
     <div>
-      <h1>User Page{user}</h1>
+      
+      <Background {...bgObjOne} />
+       
     </div>
   );
 }
