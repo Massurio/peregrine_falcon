@@ -78,8 +78,8 @@ export default function Footer() {
               Camino de Santiago
             </Link>
           </div>
-          <small className='website-rights'>Created by: Abu, Lee, Mark, Massurio, and Tom</small>
-          <small className='website-rights'>Peregrine_Falcons © 2021</small>
+          <small className='website-rights'>Created by: Abu, Lee, Mark, Massurio & Tom</small>
+          <small className='website-rights'>Peregrine Falcons © 2022</small>
           <div className='social-icons'>
             <Link
               className='social-icon-link'
