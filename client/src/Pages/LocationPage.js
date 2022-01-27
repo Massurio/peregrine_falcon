@@ -29,6 +29,7 @@ const LocationPage = ({user}) => {
   const [rating, setRating] = useState('');
   
 
+
   // to get users current location use browser built in location API
   useEffect(() => {
     // destructure to get coordinates and destructure again for lat & long
@@ -48,9 +49,9 @@ const LocationPage = ({user}) => {
 
   useEffect(
     () => {
-      if (bounds.sw && bounds.ne) {
+            if (bounds.sw && bounds.ne) {
         setIsLoading(true);
-
+console.log("Hello world 3");
         getWeatherData(coordinates.lat, coordinates.lng).then((data) =>
           setWeatherData(data)
         );
@@ -67,7 +68,15 @@ const LocationPage = ({user}) => {
     // rerun the code everytime the map changes
     [type, bounds]
   );
-
+  useEffect(() => {
+    console.log("hello world 1");
+    getLocationData(setLocationData);
+    console.log("hello world 2");
+          }, []
+      );
+  
+  const albergueArray = locationData.locationAlbergueData[0].fredalbergue;
+  console.log(albergueArray);
   return (
     <>
       <CssBaseline />
@@ -98,6 +107,42 @@ const LocationPage = ({user}) => {
 
 
       </Grid>
+
+      <h4>List of local Albergues</h4>
+ <table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Price</th>
+    <th>Beds</th>
+    <th>Opening Period</th>
+    <th>Booking Link</th>
+    <th>Phone Number</th>
+  </tr>
+  {albergueArray.map((item, index) => {
+    const rate = "€"+ Math.round(item.onedPersonRateMin);
+    const beds = item.numberOfBeds + "÷" + item.numberOfDorms;
+    const href1 = item.albergueWebsiteURL;
+    const href2 = item.albergueBookingDotComURL;
+    const phone = "+"+item.tel1CountryCode+" "+item.tel1PhoneNumber;
+    const text1 = "tel:"+phone;
+            return (
+          <>
+          <tr key={index}>
+          <td><u><a href={href1}>{item.albergueName}</a></u></td> 
+          <td>{item.albergueStreetAdress}</td>
+          <td>{rate}</td>
+          <td>{beds}</td>
+          <td>{item.openingPeriod}</td>
+          <td><u><a href={href2}>Booking</a></u></td>
+          <td><u><a href={text1}>{phone}</a></u></td>
+            </tr> 
+
+          </>
+        )})}
+  </table>
+
+
     </>
 
   );
