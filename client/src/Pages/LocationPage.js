@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CssBaseline, Grid } from '@material-ui/core';
-
 import { getPlacesData, getWeatherData } from '../api';
+import { getLocationData } from '../utils/getContent';
 
 import Header from '../components/Header/Header';
 import List from '../components/List/List';
@@ -16,12 +16,9 @@ const LocationPage = ({user}) => {
 
   const [childClicked, setchildClicked] = useState({});
 
-  // set coordinates dynamically using useState
   const [coordinates, setCoordinates] = useState({
-    // lat: 0,
-    // lng: 0,
-    // lat: 43.16342,
-    // lng: -1.2358,
+    lat: 43.16342,
+    lng: -1.2358,
   });
   // set google maps window boundries
   const [bounds, setBounds] = useState({});
