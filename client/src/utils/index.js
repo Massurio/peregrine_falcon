@@ -5,7 +5,7 @@ export const tokenFetch = async (setUser) => {
       headers: { Authorization: `Bearer ${localStorage.getItem('myToken')}` },
     });
     const data = await response.json();
-    setUser(data.user);
+    setUser(data.user.username);
   } catch (error) {
     console.log(error);
   }
