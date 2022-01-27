@@ -20,23 +20,23 @@ export default function MainSection({
 }) {
   return (
     <>
-      <div class = {lightBg ? 'home__main-section' : 'home__main-section darkBg'}>
-        <div class = 'container'>
+      <div className = {lightBg ? 'home__main-section' : 'home__main-section darkBg'}>
+        <div className = 'container'>
           <div
-            class = 'row home__main-row'
+            className = 'row home__main-row'  
             style={{
               display: 'flex',
               flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'
             }}
           >
-            <div class ='col'>
-              <div class ='home__main-text-wrapper'>
-                <div class ='top-line'>{topLine}</div>
-                <h1 class = {lightText ? 'heading' : 'heading dark'}>
+            <div className ='col'>
+              <div className ='home__main-text-wrapper'>
+                <div className ='top-line'>{topLine}</div>
+                <h1 className = {lightText ? 'heading' : 'heading dark'}>
                   {headline}
                 </h1>
                 <p
-                  class = {
+                  className = {
                     lightTextDesc
                       ? 'home__main-subtitle'
                       : 'home__main-subtitle dark'
@@ -44,16 +44,16 @@ export default function MainSection({
                 >
                   {description}
                 </p>
-                <ul class = {featureDisplay ? 'features' : 'noDisplay'}>
-                  <li>{features}</li><br/>
-                  <li>{features1}</li><br/>
-                  <li>{features2}</li><br/>
-                  <li>{features3}</li><br/>
+                <ul className = {featureDisplay ? 'features' : 'noDisplay'}>
+                  <p>{features}</p><br/>
+                  <p>{features1}</p><br/>
+                  <p>{features2}</p><br/>
+                  <p>{features3}</p><br/>
                </ul>
               </div>
             </div>
-            <div class ='col'>
-              <div class ='home__main-img-wrapper'>
+            <div className ='col'>
+              <div className ='home__main-img-wrapper'>
                 <img src={img} alt={alt} className='home__main-img' />
               </div>
             </div>

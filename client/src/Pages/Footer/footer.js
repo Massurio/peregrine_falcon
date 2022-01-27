@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../../components/Button';
 import './footer.css';
 
 import { Link } from 'react-router-dom';
@@ -29,7 +30,7 @@ export default function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            
+             <Button buttonStyle='btn--outline'>Subscribe</Button>
           </form>
         </div>
       </section>
@@ -76,6 +77,7 @@ export default function Footer() {
               Camino de Santiago
             </Link>
           </div>
+          <small className='website-rights'>Created by: Abu, Lee, Mark, Massurio, and Tom</small>
           <small className='website-rights'>Peregrine_Falcons © 2021</small>
           <div className='social-icons'>
             <Link

@@ -1,0 +1,142 @@
+.content {
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    background: url('../Pages/images/Camino_userpage_bg.jpeg') left top no-repeat, url('../Pages/images/Camino_userpage_bg.jpeg') right bottom no-repeat;
+    opacity: 0.3;
+    font-family: 'Roboto', sans-serif;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding: 160px 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    
+  }
+
+  .bg_home__main-row {
+    
+    align-items: center;
+  }
+  
+  .bg_row {
+    
+    display: flex;
+    margin-right: -15px;
+    margin-bottom: -15px;
+    margin-left: -15px;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  
+  .bg_col {
+    
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 1;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  
+  .bg__main-text-wrapper {
+    
+    max-width: 540px;
+    padding-top: 120px;
+    padding-bottom: 180px;
+  }
+
+  .bg_main_text{
+    margin-bottom: 24px;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: black
+  }
+  
+  .bg_top-line {
+    color: black;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  
+  .bg_heading {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: black
+  }
+  
+  .bg_dark {
+    color: #1c2237;
+  }
+  
+  .bg_darkBg {
+    background-color: #1c2237;
+  }
+  
+  .bg_home__main-subtitle {
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .bg_home__main-img-wrapper {
+    display: flex;
+    justify-content: right; 
+    
+    max-width: 555px;
+  }
+  
+  .bg_home__main-img {
+    padding: 10px;
+    border-radius: 1rem;  
+    background-image: url('../Pages/images/Camino_map3.jpg');  
+    
+    overflow: hidden;
+    position: relative;
+    max-width: 95%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 10px;
+    padding-right: 0;
+  }
+  
+  .bimg {
+    border: red dashed 3px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .bg_container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .bg_home__main-text-wrapper {
+      padding-bottom: 65px;
+    }
+  
+    .bg_col {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+  
