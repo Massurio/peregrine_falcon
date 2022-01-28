@@ -83,7 +83,7 @@
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 1px;
-  background: rgba(80, 63, 63, 0.4);
+  background: rgba(80, 63, 63, 0.04);
   padding: 10px 20px;
   border: none;
   outline: none;
@@ -172,6 +172,8 @@ form{
 }
 .ContactUsBg{
   background-image: url('./Pages/images/ContactPage.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 /* padding: 8px 20px;
   border-radius: 4px;
