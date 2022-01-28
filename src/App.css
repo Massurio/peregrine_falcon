@@ -78,12 +78,12 @@
   font-size: 20px;
   text-align: center; */
   border-radius: 2rem;
-  width: 76%;
+  width: 50%;
   color: rgb(38, 50, 56);
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 1px;
-  background: rgba(80, 63, 63, 0.04);
+  background: rgba(80, 63, 63, 0.4);
   padding: 10px 20px;
   border: none;
   outline: none;
@@ -99,7 +99,7 @@
 
 input {
   max-width: 50%;
-  color: rgb(38, 50, 56);
+  color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
@@ -159,6 +159,15 @@ input {
   font-size: 25px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   align-items: left;
+}
+form{
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-style:italic;
+  font-weight: bold;
+}
+.loginTitile{
+  color: rgb(0, 0, 0);
 }
 /* padding: 8px 20px;
   border-radius: 4px;
