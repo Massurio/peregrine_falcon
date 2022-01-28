@@ -133,7 +133,9 @@ input {
     font-size: 20px;
     }
     
-
+.ContactUsBg{
+  background-image: url('./Pages/images/ContactPage.jpg');
+}
 
   /* display: block;
   margin: auto auto;
