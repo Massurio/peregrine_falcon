@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './../Pages/StagePage.css';
 import { getStageData } from '../utils/getContent';
 
 
@@ -60,8 +60,9 @@ export default function StagePage({user}) {
 
 
   return (
-  <div>
-      <h1>Stage Page </h1>
+  <div className='table'>
+    <div className='content1'>
+      <div className='SPTitle'>Stage Page </div>
       <p>Overall distance = {distance} kilometres or {distanceInMiles} miles</p>
       <p> Estimated duration = {hours} hours and {minutes} minutes</p>
       <p>Starting GPS location = <u><a href={hrefText1}>{startLatitude},{startLongitude}</a></u></p>
@@ -95,9 +96,10 @@ export default function StagePage({user}) {
           </>
         );
       })}
-         <img src={stageMapURL} alt="Stage Map" width="800px" />
+         <img className='SPimg' src={stageMapURL} alt="Stage Map" width="800px" />
          <br></br>
-         <img src={stageElevationChartURL} alt="Stage Map" width="800px" />
+         <img className='SPimg'src={stageElevationChartURL} alt="Stage Map" width="800px" />
+    </div>
     </div>
   );
 };

@@ -21,8 +21,11 @@ export default function Registration() {
   const navigate = useNavigate();
 
   return (
+    <div className = "loginBg">
+    <div className = 'form-wrapper'>
     <div className="form">
-      <h1>Sign up Page</h1>
+      <div className='loginTitile'>Sign up Page</div>
+      
       {!success ? (
       <form onSubmit={handleSubmit}>
         <label alt="username">Username</label>
@@ -62,5 +65,8 @@ export default function Registration() {
       </form>): (navigate('/login'))}
       
     </div>
+    </div>
+    </div>
+    
   );
 }
