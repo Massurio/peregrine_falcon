@@ -11,7 +11,7 @@ import {
   FaTwitter,
   FaLinkedin
 } from 'react-icons/fa';
-import {BsFillBrightnessHighFill} from "react-icons/bs";
+// import {BsFillBrightnessHighFill} from "react-icons/bs";
 
 export default function Footer() {
   return (
