@@ -13,12 +13,15 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { tokenFetch } from './utils';
+import { getLocationData } from "./utils/getContent";
 
 function App() {
   const [user, setUser] = useState();
+  const [locationData, setLocationData] = useState();
 
 useEffect(()=>{
-  tokenFetch(setUser)
+  tokenFetch(setUser);
+  getLocationData(setLocationData);
 },[])
 
   return (
@@ -37,7 +40,10 @@ useEffect(()=>{
 
           <Route path="/userPage" element={<UserPage user={user} />} />
           <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/locationPage" element={<LocationPage user={user}/>} />
+          <Route
+           path="/locationPage"
+           element={<LocationPage user={user} locationData={locationData} />}
+          />
           <Route path="/stagepage" element={<StagePage user={user}/>} />
         </Routes>
         <Footer />
