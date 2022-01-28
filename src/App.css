@@ -124,11 +124,10 @@ input {
   text-align: left;
   font-size: 20px;
 }
-.footer-input{
+.footer-input {
   width: 100%;
-margin-right: 90px;  
+  margin-right: 100px;
 }
-
 
 /* display: block;
   margin: auto auto;
