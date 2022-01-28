@@ -96,6 +96,9 @@
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
 }
+.ContactUsBg{
+  background-image: url('./Pages/images/ContactPage.jpg');
+}
 
 input {
   max-width: 50%;
