@@ -314,7 +314,7 @@ const LocationPage = ({user}) => {
 						"onedPersonRateMax": null,
 						"twoPersonRateMin": "56.00",
 						"twodPersonRateMax": "69.00",
-						"rateNotes": "B&B / Mainly signle beds.",
+						"rateNotes": "B&B / Mainly single beds.",
 						"kitchenFacilitiesAvailable": true,
 						"washingMachineAvailable": true,
 						"dryingMachineAvailable": true,
@@ -375,28 +375,37 @@ const LocationPage = ({user}) => {
     <th>Name</th>
     <th>Address</th>
     <th>Price</th>
+	<th>Notes</th>
     <th>Beds</th>
     <th>Opening Period</th>
+	<th>Email</th>
     <th>Booking Link</th>
     <th>Phone Number</th>
+	<th>Comments</th>
   </tr>
+
   {albergueArray.map((item, index) => {
     const rate = "€"+ Math.round(item.onedPersonRateMin);
     const beds = item.numberOfBeds + "÷" + item.numberOfDorms;
-    const href1 = item.albergueWebsiteURL;
+    const email = item.email;
+	const href1 = item.albergueWebsiteURL;
     const href2 = item.albergueBookingDotComURL+"?aid=1627093";
     const phone = "+"+item.tel1CountryCode+" "+item.tel1PhoneNumber;
     const text1 = "tel:"+phone;
+	const text2 = "mailto:"+email;
             return (
           <>
           <tr key={index}>
           <td><u><a href={href1}>{item.albergueName}</a></u></td> 
           <td>{item.albergueStreetAdress}</td>
           <td>{rate}</td>
+		  <td>{item.rateNotes}</td>
           <td>{beds}</td>
           <td>{item.openingPeriod}</td>
+		  <td><u><a href={text2}>{email}</a></u></td>
           <td><u><a href={href2}>Booking</a></u></td>
           <td><u><a href={text1}>{phone}</a></u></td>
+		  <td>{item.albergueAdditionalComments}</td>
             </tr> 
 
           </>

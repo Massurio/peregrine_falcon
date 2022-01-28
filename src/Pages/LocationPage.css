@@ -14,4 +14,11 @@ table {
     background-color: #dddddd;
   }
 
-  
+  h4 {
+    font-size: 2em;
+    text-decoration: underline;
+  }
+
+  .important {
+    font-size: 1.8em;
+  }
