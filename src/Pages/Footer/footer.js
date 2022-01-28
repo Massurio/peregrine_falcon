@@ -24,7 +24,7 @@ export default function Footer() {
           You can unsubscribe at any time.
         </p>
         <div className='input-areas'>
-          <form>
+          <form className='sub'>
             <input
               className='footer-input'
               name='email'

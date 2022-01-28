@@ -11,7 +11,6 @@
 }
 
 .loginBg {
-   
   overflow: hidden;
   position: relative;
   min-height: 800px;
@@ -19,22 +18,17 @@
   background-image: url('./Pages/images/camino_bg_purple.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
 }
 
-
 .form-wrapper {
-
   /* padding-left: 470px; */
   padding-top: 300px;
   justify-content: center;
   display: flex;
-  
-
 }
 
 .loginTitile {
-  font-family:'Nunito', sans-serif;;
+  font-family: 'Nunito', sans-serif;
   font-size: 60px;
   padding-bottom: 60px;
 }
@@ -42,7 +36,6 @@
   
   background-image: url("./Pages/images/Camino_Colour_Palette6.png");
 } */
- 
 
 /* NavBar */
 /* 
@@ -67,7 +60,6 @@
 
 /* Login Form */
 .form {
-  
   /* position:static; */
   /* border-radius: 3%;
   width: 100%;
@@ -103,39 +95,42 @@
   margin-bottom: 27px;
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
-  }
+}
 
 input {
-  width: 76%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    display: block;
-    background-color: rgb(226, 224, 220); 
-    margin: auto auto;
-    width: 100%;
-    margin-bottom: 2em;
-    padding-bottom: 1.25em;
-    text-align: left;
-    font-size: 20px;
-    }
-    
+  max-width: 50%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  background-color: rgb(226, 224, 220);
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding-bottom: 1.25em;
+  text-align: left;
+  font-size: 20px;
+}
+.footer-input{
+  width: 100%;
+margin-right: 90px;  
+}
 
 
-  /* display: block;
+/* display: block;
   margin: auto auto;
   width: 100%;
   margin-bottom: 2em;
@@ -152,21 +147,21 @@ input {
 
 .button {
   cursor: pointer;
-        border-radius: 5em;
-        color: #fff;
-        background: linear-gradient(to right, #9C27B0, #E040FB);
-        border: 0;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        font-family: 'Ubuntu', sans-serif;
-        /* margin-left: 35%; */
-        font-size: 25px;
-        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-        align-items: left;
-    }
-  /* padding: 8px 20px;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9c27b0, #e040fb);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  /* margin-left: 35%; */
+  font-size: 25px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  align-items: left;
+}
+/* padding: 8px 20px;
   border-radius: 4px;
   outline: none;
   border: none;
@@ -181,7 +176,6 @@ input {
   font-family: 'Courier New', Courier, monospace;
   margin-right: 0.5em;
   box-shadow: inset 0px 1px 0px; } */
-
 
 /* End of Login Form */
 
