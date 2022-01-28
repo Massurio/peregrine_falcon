@@ -33,7 +33,6 @@ export default function Registration() {
           type="text"
           name="username"
           title="username"
-          placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
           required
         />
@@ -42,7 +41,6 @@ export default function Registration() {
           type="email"
           name="email"
           title="email"
-          placeholder="email"
           onChange={(e) => setEmail(e.target.value)}
           required
         />
@@ -51,7 +49,6 @@ export default function Registration() {
           type="password"
           name="password"
           title="password"
-          placeholder="password"
           onChange={(e) => setpassw(e.target.value)}
           required
         />

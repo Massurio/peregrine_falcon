@@ -24,22 +24,20 @@ export default function Login({ user, setUser }) {
         <div className="form">
           <div className='loginTitile'>Login Page</div>
           <form onSubmit={login_handler}>
-            <label alt={username}>username</label>
+            <label alt={username}>Username</label>
             <input
               type="text"
               name="username"
               title="username"
-              placeholder="username"
               onChange={(event) => {
                 setUsername(event.target.value);
               }}
             />
-            <label alt="password">password</label>
+            <label alt="password">Password</label>
             <input
               type="password"
               name="password"
               title="password"
-              placeholder="password"
               onChange={(event) => {
                 setPassword(event.target.value);
               }}
