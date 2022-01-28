@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { getStageData } from '../utils/getContent';
+import './LocationPage.css';
 
 
 export default function StagePage({user}) {
@@ -62,11 +63,22 @@ export default function StagePage({user}) {
   return (
   <div>
       <h1>Stage Page </h1>
-      <p>Overall distance = {distance} kilometres or {distanceInMiles} miles</p>
-      <p> Estimated duration = {hours} hours and {minutes} minutes</p>
-      <p>Starting GPS location = <u><a href={hrefText1}>{startLatitude},{startLongitude}</a></u></p>
-      <p>Destination GPS location = <u><a href={hrefText2}>{stageDestinationLatitude},{stageDestinationLongitude}</a></u></p>
+      <p class="important">Overall distance = {distance} kilometres or {distanceInMiles} miles</p>
+      <p class="important">Estimated duration = {hours} hours and {minutes} minutes</p>
+      <p class="important">Starting GPS location = <u><a href={hrefText1}>{startLatitude},{startLongitude}</a></u></p>
+      <p class="important">Destination GPS location = <u><a href={hrefText2}>{stageDestinationLatitude},{stageDestinationLongitude}</a></u></p>
       <br></br>
+      
+      <h4>Stage distances</h4>
+  <table>
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>Distance in Kms</th>
+	  <th>Distance in Miles</th>
+    <th>Expected Duration</th>
+  </tr>
+
   
   
       {stageData.stageData.map((myItem, index) => {
@@ -82,19 +94,26 @@ export default function StagePage({user}) {
                 let myIndex = nestedIndex-1;
                 if (myIndex < 0){myIndex = 0};
                 const fromLocation = stageData.stageData[0].Locations[myIndex].locationName;
-                let lineText = fromLocation+" to "+toLocation+" = "+kmDistance+" km or "+distanceInMiles+" miles. Walking time= "+hours+" hours and "+minutes+" minutes";
+                const walkingTime = hours+" hours and "+minutes+" minutes";
                 if (nestedIndex == 0 ) {
-                  {lineText = "STAGE DISTANCES AND WALKING TIMES"};
+                 
                 };
               return (
                 <>
-                <p key={nestedIndex}>{lineText}</p>
+                <tr key={nestedIndex}>
+                  <td>{fromLocation}</td>
+                  <td>{toLocation}</td>
+                  <td>{kmDistance}</td>
+                  <td>{distanceInMiles}</td>
+                  <td>{walkingTime}</td>
+                </tr>
                 </>
               );
             })}
           </>
         );
       })}
+      </table>
          <img src={stageMapURL} alt="Stage Map" width="800px" />
          <br></br>
          <img src={stageElevationChartURL} alt="Stage Map" width="800px" />
