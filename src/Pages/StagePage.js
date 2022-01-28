@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
+import './../Pages/StagePage.css';
 import { getStageData } from '../utils/getContent';
 import './LocationPage.css';
+
 
 
 export default function StagePage({user}) {
@@ -61,12 +62,14 @@ export default function StagePage({user}) {
 
 
   return (
-  <div>
+
+<div className='table1'>
       <h1>Stage Page </h1>
       <p class="important">Overall distance = {distance} kilometres or {distanceInMiles} miles</p>
       <p class="important">Estimated duration = {hours} hours and {minutes} minutes</p>
       <p class="important">Starting GPS location = <u><a href={hrefText1}>{startLatitude},{startLongitude}</a></u></p>
       <p class="important">Destination GPS location = <u><a href={hrefText2}>{stageDestinationLatitude},{stageDestinationLongitude}</a></u></p>
+
       <br></br>
       
       <h4>Stage distances</h4>
@@ -113,10 +116,13 @@ export default function StagePage({user}) {
           </>
         );
       })}
+
       </table>
          <img src={stageMapURL} alt="Stage Map" width="800px" />
+
          <br></br>
-         <img src={stageElevationChartURL} alt="Stage Map" width="800px" />
+         <img className='SPimg'src={stageElevationChartURL} alt="Stage Map" width="800px" />
     </div>
+
   );
 };

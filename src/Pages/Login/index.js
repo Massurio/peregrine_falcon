@@ -18,12 +18,13 @@ export default function Login({ user, setUser }) {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className = "loginBg">
+    <div className = 'form-wrapper'>
       {!user ? (
         <div className="form">
-          <h1>Login Page</h1>
+          <div className='loginTitile'>Login Page</div>
           <form onSubmit={login_handler}>
-            <labe alt={username}>Username</labe>
+            <label alt={username}>username</label>
             <input
               type="text"
               name="username"
@@ -33,7 +34,7 @@ export default function Login({ user, setUser }) {
                 setUsername(event.target.value);
               }}
             />
-            <label alt="password">Password</label>
+            <label alt="password">password</label>
             <input
               type="password"
               name="password"
@@ -57,5 +58,6 @@ export default function Login({ user, setUser }) {
         navigate('/userpage')
       )}
     </div>
+   </div> 
   );
 }
